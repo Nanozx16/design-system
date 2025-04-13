@@ -1,0 +1,32 @@
+## **Description**
+
+This PR migrates the current MetaMask design system repo which is
+currently using the metamask-module-template and a polyrepo structure to
+a monorepo structure. The primary goal is to streamline the module
+management process by consolidating multiple repositories into a single
+monorepo. The `core` module serves as a reference for the files and
+structure required in the monorepo setup. This change will simplify
+dependency management and improve development efficiency across modules.
+
+<img width="444" alt="Screenshot 2024-10-08 at 2 09 12 PM"
+src="https://github.com/user-attachments/assets/eb1dcb2e-4eb1-45bb-833f-4fbe3295c84f">
+
+### Key changes:
+- Updated module configuration to align with the monorepo structure.
+- Consolidated files and dependencies into the monorepo format.
+- Ensured consistency with the `core` module in terms of file inclusion,
+structure, and build processes.
+
+## **Related issues**
+
+Fixes: #5
+
+## **Manual testing steps**
+
+1. Clone the repository and navigate to the monorepo.
+2. Run all `yarn` scripts to ensure they work with the exception of
+`prepare-preview-build` and `publish-previews`
+3. Verify that the scriptsfunction as expected within the monorepo.
+4. Ensure the build passes without issues in the monorepo format.
+5. Ensure no instances of "core" remain unless links to information for
+migrating packages
