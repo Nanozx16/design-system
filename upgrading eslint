@@ -1,0 +1,40 @@
+## Description
+
+This PR implements a major update to our ESLint configuration and
+related dependencies, migrating to ESLint 9.0.0 and adopting the new
+flat configuration format. This change aligns with the recent updates in
+our core repository and addresses multiple dependency updates that were
+pending through Dependabot.
+
+Key improvements:
+1. Migration to ESLint 9's flat configuration format using
+`eslint.config.mjs`
+2. Removal of legacy `.eslintrc.js` files across packages
+3. Consolidation of ESLint configurations
+4. Update of all ESLint-related dependencies to their latest versions
+
+This PR resolves [issue
+#285](#285) and
+consolidates the following Dependabot PRs:
+- [#280](#280) -
+@metamask/eslint-config-typescript upgrade
+- [#279](#279) -
+@metamask/eslint-config-jest upgrade
+- [#275](#275) -
+@metamask/eslint-config-nodejs upgrade
+- [#274](#274) -
+@metamask/eslint-config upgrade
+
+## Related issues
+
+Fixes: #285
+
+## Manual testing steps
+
+1. Pull down the branch
+2. Run `yarn` to update dependencies
+3. Run `yarn lint` to verify ESLint runs successfully
+4. Run `yarn changelog:validate` to verify auto changelog runs
+successfully
+5. Verify that ESLint rules are being properly enforced in your editor
+6. Test across all packages to ensure linting works as expected
